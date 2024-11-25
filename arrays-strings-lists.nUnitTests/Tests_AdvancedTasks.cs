@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using cs_arrays_strings_lists;
+﻿using cs_arrays_strings_lists;
 
 namespace arrays_strings_lists.nUnitTests
 {
@@ -60,10 +55,14 @@ namespace arrays_strings_lists.nUnitTests
             int[,] input = { { 8, 1, 6 }, { 3, 5, 7 }, { 4, 9, 2 } };
             Assert.That(AdvancedTasks.IsMagicSquare(input), Is.True);
         }
+        [Test]
         public void IsMagicSquare_False()
         {
-            int[,] input = { { 20, 300, 50 }, { 34, 42, 90 }, { 100, 80, 4 } };
-            Assert.That(AdvancedTasks.IsMagicSquare(input), Is.False);
+            int[,] input1 = { { 20, 300, 50 }, { 34, 42, 90 }, { 100, 80, 4 } };
+            Assert.That(AdvancedTasks.IsMagicSquare(input1), Is.False);
+
+            int[,] input2 = { { 1, 5, 9 }, { 6, 7, 2 }, { 8, 3, 4 } };
+            Assert.That(AdvancedTasks.IsMagicSquare(input2), Is.False);
         }
     }
 }
